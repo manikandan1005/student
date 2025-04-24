@@ -1,0 +1,31 @@
+<div class="card-body p-3">
+    <div class="cart-header">
+        <h1>Add New Student</h1>
+    </div>
+    <div class="card-body d-flex list">
+        <form action="" class="form d-flex g-3 p-5">
+            
+            <span class="d-flex">
+                <label for="name">first Name</label>
+            <input type="text" name="firstName" [(ngModel)]="student.firstName" id="">
+
+            <label for="name">Last Name</label>
+            <input type="text" name="lastName" [(ngModel)]="student.lastName" id="">
+            </span>
+            
+            <label for="name">City</label>
+            <input type="text" name="city" [(ngModel)]="student.city" id="">
+            
+            <label for="name">Course</label>
+            <input placeholder="Enter the course name" type="text" name="course" [(ngModel)]="student.course" id="">
+
+           <span class="d-flex">
+            <label for="">course status</label>
+           <input type="checkbox" name="status" [(ngModel)]="student.status" id="">
+           </span> 
+
+           <button type="submit" class="btn btn-outline-primary" (click)="onAdd()">Add</button>
+            
+        </form>
+    </div>
+</div>
