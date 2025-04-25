@@ -19,10 +19,17 @@ export class AddformComponent {
   }
   updatedStudents:any[]=[];
   onAdd(){
+    debugger;
     console.log(this.student);
     this.updatedStudents.push({...this.student});
     this.data.studentdata(this.student);
     console.log(this.updatedStudents);
+    this.student = {
+      firstName: '',
+      lastName: '',
+      city: '',
+      course: '',
+      status: false};
   }
  
   constructor(private data:DataService){}

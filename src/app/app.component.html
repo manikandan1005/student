@@ -1,6 +1,13 @@
-<div class="nav d-flex mx-5">
-  <a routerLink="/form">Add</a>
-  <a routerLink="/list" class="ms-3">Student list</a>
-</div>
+<nav>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" routerLink="/form">New</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" routerLink="/list" >Student list</a>
+    </li>
+    
+  </ul>
+</nav>
 
 <router-outlet></router-outlet>
