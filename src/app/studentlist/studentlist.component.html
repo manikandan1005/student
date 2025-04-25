@@ -1,1 +1,28 @@
-<p>studentlist works!</p>
+<div class="card-body ">
+    <div class="card-header p-3 d-flex"><h1>studentList</h1>
+    <select name="" id="">
+        <option (click)="full()" value="full list">full list</option>
+        <option (click)="completed()" value="completed">Completed</option>
+        <option (click)="notComplet()" value="Not Completed">Not Completed</option>
+    </select>
+    </div>
+    
+    <div class="card-body">
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Status</th>
+            </thead>
+            <tbody *ngFor="let list of studentList">
+                <td>{{list.firstName}}</td>
+                <td>{{list.course}}</td>
+                <td><span *ngIf="list.status === true; else notComplete">complete</span>
+                    <ng-template #notComplete>not complete</ng-template>
+                </td>
+                
+            </tbody>
+        </table>
+       
+    </div>
+</div>

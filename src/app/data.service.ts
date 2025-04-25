@@ -10,6 +10,8 @@ export class DataService {
   studentNames$=this.studentSubject.asObservable();
 
   studentdata(students:any){
-
+   const currentData= this.studentSubject.getValue();
+   const updatedata=[...currentData,students];
+   this.studentSubject.next(updatedata);
   }
 }

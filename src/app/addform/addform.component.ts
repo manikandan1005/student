@@ -10,7 +10,7 @@ import { DataService } from '../data.service';
 })
 export class AddformComponent {
 
-  student={
+  student:any={
     firstName:"",
     lastName:"",
     city:'',
@@ -24,5 +24,6 @@ export class AddformComponent {
     this.data.studentdata(this.student);
     console.log(this.updatedStudents);
   }
+ 
   constructor(private data:DataService){}
 }
