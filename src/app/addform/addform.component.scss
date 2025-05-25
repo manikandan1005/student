@@ -1,0 +1,16 @@
+.form{
+    
+    flex-direction: column;
+    width: 700px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    gap:10px
+}
+.list{
+    justify-content: center;
+    align-items: center;
+}
+span{
+    gap: 10px;
+}
+

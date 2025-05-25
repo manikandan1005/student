@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-body ">
+        <div class="card-header p-3 d-flex"><h1>student List</h1>
+            <select (change)="filterList($event)" class="form-select" aria-label="Default select example" style="width: 18rem;">
+            <option  value="full list">full list</option>
+            <option  value="completed">Completed</option>
+            <option  value="Not Completed">Not Completed</option>
+        </select>
+        </div>
+        
+        <div class="card-body">
+            
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th class="p-3">Name</th>
+                        <th class="p-3">Course</th>
+                        <th class="p-3">Status</th>
+                    </tr>
+                    
+                </thead>
+                <tbody >
+                    <tr *ngFor="let list of studentList">
+                        
+                    <td class="m-2 p-2">{{list.firstName}}</td>
+                    <td class="m-2 p-2">{{list.course}}</td>
+                    <td class="m-2 p-2">
+                        <span *ngIf="list.status === true; else notComplete">complete</span>
+                        <ng-template #notComplete>not complete</ng-template>
+                    </td>
+                    
+                    </tr>
+                </tbody>
+            </table>
+           
+        </div>
+    </div>
+</div>
+
